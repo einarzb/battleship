@@ -1,0 +1,40 @@
+body {
+  padding:10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #000;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#chooseOpp {
+  margin-top: -30px;
+  visibility: hidden;
+}
+
+#playerList {
+  width:100px;
+  display: inline-flex;
+}
+#cellInput, #submitHit {
+  color:red;
+}
+
+#chat {
+  border:none;
+  width:400px;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+h1, h2, h3, p, h4, h3{
+  color:green;
+  font-family: monospace;
+}
+
+canvas{
+  border:1px solid red;
+  background-color: #000;
+  max-width: 800px;
+}

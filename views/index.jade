@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 my Battleship
+  h2(id='greet') 
+  h3(id='cellStatus') 
+  form(id='form')
+    //- input(id='cellInput', type="text")
+    //- input(id="submitHit", type="button",value="hit")
+    input(type="text", required, id="username", name="username", placeholder="enter username")
+    input(id="submitBtn" type="button", value='submit')
+  div(id="chooseOpp")
+      select(id="playerList", name="playerList", required)
+      br
+      input(id="selectPlayerBtn" type="button", value='play')
+  //- h3 chatroom  
+  //- pre(id="chat")
+  //board 1 
+  canvas(id="myCanvas" width="1325" height="660" style="border:2px solid #d3d3d3;") Your browser does not support the HTML5 canvas tag.
+
+  //scripts    
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/socket.js")
+  script(src="/javascripts/connect.js") 
+  script(src="/javascripts/canvas.js") 

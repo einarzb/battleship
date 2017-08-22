@@ -1,0 +1,19 @@
+TODO
+- broadcast boards to opponent -- fix board to start from 121 
+
+- draw ships and game logics.. hit/miss/etc.
+- REFACTOR - fix all DRY functions onto for loops or switch cases
+- multiple games
+- username vaildation (ui and server side) -- avoid double names
+- log out option (//disconnect only works on refresh)
+- make original player hide -
+ var chooseOpp = document.getElementById("chooseOpp").style.visibility = "hidden";
+
+
+
+- save users to DB
+
+features
+- winners table
+- radar animation (canvas)
+- typing animation (canvas)
