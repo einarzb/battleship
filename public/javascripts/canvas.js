@@ -56,7 +56,7 @@ class GameSetup {
        }
    }
 
-//needs to start with 12
+//needs to start with 121 == > for using right board
    onClick(event) {
     for (let cell = 121; cell < (this.size * this.size)*2; ++cell) {
 
@@ -65,35 +65,35 @@ class GameSetup {
           this.drawCurrentCell(cell);
           var currentCell;
           ///player board detected cells
-          if(cell < 22 && cell > 11){
-            var currentCell = "A" + (cell-11);
+          if(cell < 143 && cell > 132){
+            var currentCell = "A" + (cell-132);
           }
-          if(cell < 33 && cell > 22){
-              var currentCell = "B" + (cell-22);
+          if(cell < 154 && cell > 143){
+              var currentCell = "B" + (cell-143);
               }
-          if(cell < 44 && cell > 33){
-               var currentCell = "C" + (cell-33);
+          if(cell < 165 && cell > 154){
+               var currentCell = "C" + (cell-154);
             }
-          if(cell < 55 && cell > 44){
-               var currentCell = "D" + (cell-44);
+          if(cell < 176 && cell > 165){
+               var currentCell = "D" + (cell-165);
            }
-           if(cell < 66 && cell > 55){
-               var currentCell = "E" + (cell-55);
+           if(cell < 187 && cell > 176){
+               var currentCell = "E" + (cell-176);
             }
-          if(cell < 77 && cell > 66){
-               var currentCell = "F" + (cell-66);
+          if(cell < 198 && cell > 187){
+               var currentCell = "F" + (cell-187);
             }
-          if(cell < 88 && cell > 77){
-               var currentCell = "G" + (cell-77);
+          if(cell < 209 && cell > 198){
+               var currentCell = "G" + (cell-198);
           }
-          if(cell < 99 && cell > 88){
-               var currentCell = "H" + (cell-88);
+          if(cell < 220 && cell > 209){
+               var currentCell = "H" + (cell-209);
           }
-          if(cell < 109 && cell > 99){
-               var currentCell = "I" + (cell-99);
+          if(cell < 231 && cell > 220){
+               var currentCell = "I" + (cell-220);
           }
-          if(cell < 121 && cell > 110){
-               var currentCell = "J" + (cell-110);
+          if(cell < 242 && cell > 231){
+               var currentCell = "J" + (cell-231);
           }
       } // end if
    }//end for loop
@@ -118,7 +118,7 @@ class GameSetup {
             var cellState = cellData.getShipStatus();
 
 
-            console.log(cellData.shipStatus)
+            //console.log(cellData.shipStatus)
             //if cellState empty
             if (!(cellState === 'MISS' || cellState === 'HIT' || cellState === 'ship')) {
                 // if cell is empty -- append miss
