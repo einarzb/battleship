@@ -58,7 +58,7 @@ class GameSetup {
 
 //needs to start with 12
    onClick(event) {
-    for (let cell = 12; cell < (this.size * this.size); ++cell) {
+    for (let cell = 121; cell < (this.size * this.size)*2; ++cell) {
 
         if (this.board[cell].clickedCell(event.offsetX, event.offsetY)) {
           console.log(cell);
@@ -107,13 +107,17 @@ class GameSetup {
   }//end onclick function
 
     drawCurrentCell(cell){
-            if (cell === undefined) {
+            // for(var cell = 121; cell < 231; cell += 11){
+            //    console.log(cell);
+            // }
+
+            if (cell === undefined || cell === 121 || cell === 132 || cell === 143) {
                 return;
             }
             var cellData = this.board[cell];
             var cellState = cellData.getShipStatus();
-            
-    
+
+
             console.log(cellData.shipStatus)
             //if cellState empty
             if (!(cellState === 'MISS' || cellState === 'HIT' || cellState === 'ship')) {
@@ -126,9 +130,9 @@ class GameSetup {
             cellData.setShipStatus(this.hit);
             cellData.drawShipStates(this.ctx);
             //check in server
-            connect.checkServerForHit(cell,cellData.shipStatus); 
+            connect.checkServerForHit(cell,cellData.shipStatus);
 
-        
+
         if(cell === 55 || cell === 66 || cell === 77 || cell === 88 || cell === 99 || cell === 44 || cell === 33 || cell === 22 || cell === 1){
                 console.log("cant press here");
                 //SHOULD NOT PRINT HIT ON THOSE CELLS
